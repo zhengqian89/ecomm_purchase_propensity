@@ -1,0 +1,7 @@
+raw_data_path: 'data/raw'
+processed_data_path: 'data/processed'
+features_data_path: 'data/features/'
+models_path: 'models/'
+predictions_path: 'data/predictions/'
+mlflow_tracking_uri: 'file:./mlruns'
+mlflow_experiment_name: 'taobao_purchase_propensity'
