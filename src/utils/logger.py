@@ -30,5 +30,18 @@ def setup_logging() -> logging.Logger:
     
     return logging.getLogger('src')
 
+def get_logger(name: str) -> logging.Logger:
+    '''
+    Get a logger instance.
+
+    Args:
+        name: Name for the logger
+    
+    Returns:
+        Logger instance
+    '''
+    return logging.getLogger(f'{name}')
+
+
 # Initialize logging
-logger = setup_logging()
+logger = setup_logging() # this gets run when the module is imported
