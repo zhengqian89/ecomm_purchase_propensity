@@ -11,8 +11,8 @@ from src.utils.logger import get_logger
 # Set up and instantiate logger
 logger = get_logger(__name__)
 
-class ConfigLoader:
-    '''Utility class to load configuration files.'''
+class DataLoader:
+    '''Data loader for Taobao user behavior dataset.'''
 
     def __init__(self, config_dir: str = 'config'):
         '''
