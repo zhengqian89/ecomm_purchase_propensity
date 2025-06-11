@@ -21,7 +21,11 @@ class ConfigLoader:
         self.config = config_loader.get_data_paths()
         self.model_config = config_loader.get_model_params()
 
-    def load_raw_data(self, file_path: Optional[str] = None) -> pd.DataFrame:
+    def load_raw_data(
+            self,
+            file_path: Optional[str] = None,
+            nrows: Optional[int] = None
+        ) -> pd.DataFrame:
         '''
         Load raw UserBehavior.csv data.
 
@@ -34,7 +38,10 @@ class ConfigLoader:
         if file_path is None:
             file_path = self.config['raw_data_path']
         
-        logger.info(f'Loading raw data from {file_path}')
+        if not nrows:
+            logger.info(f'Loading raw data from {file_path}')
+        else:
+            logger.info(f'Loading a sample of {nrows} rows.')
 
         # Check if file exists
         if not Path(file_path).exists():
@@ -44,7 +51,7 @@ class ConfigLoader:
         column_names = ['user_id', 'item_id', 'category_id', 'behavior_type', 'timestamp']
 
         try:
-            df = pd.re(file_path, names=column_names, header=None)
+            df = pd.read_csv(file_path, names=column_names, header=None, nrows=nrows)
             logger.info(f'Loaded {len(df):,} records from {file_path}')
 
             # Basic validation
