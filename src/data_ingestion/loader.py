@@ -1,8 +1,6 @@
 '''
 Data ingestion module for the eCommerce Purchase Propensity Engine.
 '''
-from pathlib import Path
-from src.utils.logger import get_logger
 from src.utils.config_loader import config_loader
 
 class ConfigLoader:
@@ -10,11 +8,9 @@ class ConfigLoader:
 
     def __init__(self, config_dir: str = 'config'):
         '''
-        Initialize the config loader.
-
-        Args:
-            config_dir: Directory containing configuration files
+        Initialize data loader.
         '''
-        # Always resolve path relative to this file
-        self.config_dir = Path(__file__).resolve().parent.parent.parent / config_dir
-        self._configs = {}
+        self.config = config_loader.get_data_paths()
+        self.model_config = config_loader.get_model_params()
+
+    def load_raw_data()
