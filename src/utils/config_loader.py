@@ -51,6 +51,11 @@ class ConfigLoader:
         '''
         return self.load_config('data_paths')
     
+    def get_model_params(self) -> Dict[str, Any]:
+        '''
+        Get model parameters configuration.
+        '''
+
     def get_logging_config(self) -> Dict[str, Any]:
         '''
         Get logging configuration
