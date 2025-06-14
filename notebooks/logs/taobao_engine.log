@@ -1,0 +1,394 @@
+2025-06-07 17:42:19,811 - src.src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from data/raw/UserBehavior.csv
+2025-06-07 23:05:09,104 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from data/raw/UserBehavior.csv
+2025-06-07 23:12:14,822 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from data/raw/UserBehavior.csv
+2025-06-07 23:13:06,287 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from data/raw/UserBehavior.csv
+2025-06-07 23:13:51,077 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from data/raw/UserBehavior.csv
+2025-06-07 23:33:57,187 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from data/raw/UserBehavior.csv
+2025-06-07 23:35:31,759 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from data/raw/UserBehavior.csv
+2025-06-07 23:35:36,474 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-07 23:36:06,557 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-07 23:36:06,560 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-07 23:36:12,357 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-07 23:36:12,901 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,994
+2025-06-07 23:36:14,969 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,162,024
+2025-06-07 23:36:15,503 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,439
+2025-06-07 23:36:19,834 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      89716264
+cart     5530446
+fav      2888258
+buy      2015839
+Name: count, dtype: int64
+2025-06-08 12:00:35,064 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 12:00:54,090 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 12:00:54,092 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 12:00:57,487 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 12:00:57,848 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,994
+2025-06-08 12:00:59,202 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,162,024
+2025-06-08 12:00:59,465 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,439
+2025-06-08 12:01:02,077 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      89716264
+cart     5530446
+fav      2888258
+buy      2015839
+Name: count, dtype: int64
+2025-06-08 12:19:11,777 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 12:19:29,868 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 12:19:29,870 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 12:19:33,457 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 12:19:33,879 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,994
+2025-06-08 12:19:35,297 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,162,024
+2025-06-08 12:19:35,572 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,439
+2025-06-08 12:19:38,404 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      89716264
+cart     5530446
+fav      2888258
+buy      2015839
+Name: count, dtype: int64
+2025-06-08 12:19:56,051 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 12:20:13,584 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 12:20:13,586 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 12:20:17,140 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 12:20:17,420 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,994
+2025-06-08 12:20:18,696 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,162,024
+2025-06-08 12:20:18,962 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,439
+2025-06-08 12:20:21,800 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      89716264
+cart     5530446
+fav      2888258
+buy      2015839
+Name: count, dtype: int64
+2025-06-08 13:10:42,673 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 13:11:12,757 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 13:11:12,762 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 13:11:18,810 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 13:11:19,292 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,994
+2025-06-08 13:11:21,330 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,162,024
+2025-06-08 13:11:21,791 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,439
+2025-06-08 13:11:27,340 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      89716264
+cart     5530446
+fav      2888258
+buy      2015839
+Name: count, dtype: int64
+2025-06-08 13:11:27,603 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 13:12:02,079 - src.data_ingestion.loader - ERROR - loader - _validate_schema - Schema validation failed:
+    schema_context     column            check  check_number  failure_case  \
+0           Column  timestamp  greater_than(0)             0   -1586903608   
+209         Column  timestamp  greater_than(0)             0   -1271476638   
+216         Column  timestamp  greater_than(0)             0   -1271471219   
+215         Column  timestamp  greater_than(0)             0   -1271475899   
+214         Column  timestamp  greater_than(0)             0   -1271476228   
+..             ...        ...              ...           ...           ...   
+105         Column  timestamp  greater_than(0)             0   -1271351916   
+104         Column  timestamp  greater_than(0)             0   -1271351950   
+103         Column  timestamp  greater_than(0)             0   -1271351980   
+102         Column  timestamp  greater_than(0)             0   -1271387902   
+317         Column  timestamp  greater_than(0)             0   -2134949222   
+
+        index  
+0     5896224  
+209  76042870  
+216  76042877  
+215  76042876  
+214  76042875  
+..        ...  
+105  67462564  
+104  67462563  
+103  67462562  
+102  67462561  
+317  89313220  
+
+[318 rows x 6 columns]
+2025-06-08 13:12:02,080 - src.data_ingestion.loader - ERROR - loader - load_raw_data - Error loading data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv: {
+    "DATA": {
+        "DATAFRAME_CHECK": [
+            {
+                "schema": null,
+                "column": "timestamp",
+                "check": "greater_than(0)",
+                "error": "Column 'timestamp' failed element-wise validator number 0: greater_than(0) failure cases: -1586903608, -2034497153, -2034497135, -2034497078, -2034496919, -2034496686, -2034496606, -2034496566, -2034496546, -2034496512, -2034496438, -2034496407, -2034496405, -2034496402, -2034496353, -2034496291, -2034495972, -2034495937, -2034495763, -2034495752, -2034495721, -2034495541, -2034494609, -2034494471, -2034494443, -2034494392, -2034494343, -2034493975, -2034493566, -1270657622, -1271752600, -1271022384, -1271043751, -1271043742, -1271043705, -1271043659, -1271043656, -1271043642, -1271043593, -1271043549, -1271043536, -1271043492, -1271043478, -1271043353, -1271043344, -1271043257, -1271043232, -1271043167, -1271042232, -1271041816, -1271041789, -1270996366, -1270996349, -1270996299, -1270954504, -1270954491, -1271103936, -1631962554, -1631962302, -1631962264, -1631962208, -1271655832, -1875959883, -1270596224, -1622661729, -1622490063, -1622490015, -1622403015, -1622402898, -1622402860, -1622402490, -1270677601, -1270677565, -1270647896, -1270647886, -1270647875, -1270647847, -1270647815, -1270647813, -1270647795, -1270647598, -1270647554, -1270647449, -1270647178, -1270647157, -1270647119, -1270645476, -1270645266, -1270644851, -1270644589, -1270644275, -1270643882, -1270643864, -1270643774, -1270402219, -1271417955, -1271417924, -1271417857, -1271417828, -1271417752, -1271417726, -1271389537, -1271387902, -1271351980, -1271351950, -1271351916, -1271351889, -1271329108, -1271310641, -1511713542, -1511713346, -1511713279, -1511713199, -1511713157, -1511713034, -1511712932, -1511712712, -1511712570, -1511712563, -1511712415, -1511712404, -1511712146, -1511712000, -1511711960, -1511711541, -1511710660, -1511710631, -1511707311, -1511707289, -1511707248, -1511706942, -1511706871, -1511706855, -1511706827, -1511706790, -1511706782, -1511706696, -1511680010, -1511679981, -1511679899, -1511679848, -1511679727, -1511679703, -1511679683, -1511678615, -1511678603, -1511678576, -1511678573, -1511678566, -1511678564, -1511678540, -1511678484, -1511676403, -1511670479, -1511670461, -1511670372, -1511670352, -1511670254, -1511670246, -1511669980, -1511669860, -1511665046, -1511665021, -1511664945, -1511664927, -1511664897, -1511664812, -1511664402, -1511663566, -1511663535, -1511663452, -1511662029, -1511661770, -1511661712, -1511660914, -1511660617, -1511660488, -1511660380, -1511660355, -1511660206, -1511660055, -1511660039, -1511660001, -1511659974, -1511659940, -1511653116, -1511653094, -1511653001, -1511652955, -1511652894, -1511643427, -1511638488, -1511635035, -1511634033, -1511633965, -1511595357, -1511593774, -1523979633, -1270897486, -1270819787, -1270817190, -1271477023, -1271476975, -1271476886, -1271476779, -1271476769, -1271476754, -1271476715, -1271476654, -1271476638, -1271476623, -1271476602, -1271476438, -1271476268, -1271476228, -1271475899, -1271471219, -1271471004, -1271470905, -1271470852, -1271470735, -1271470719, -1271470688, -1271470462, -1271470423, -1271470341, -1271470300, -1271470248, -1271470225, -1271470213, -1271470174, -1271470117, -1271469976, -1271469868, -1271469673, -1271469400, -1271469268, -1271469119, -1271468644, -1271468531, -1553488688, -1553488537, -1553488522, -1553488486, -1553488139, -1553488029, -1553487967, -1553487907, -1553487858, -1553487771, -1553420388, -1553420309, -1553419949, -1553419843, -1553419805, -1553419493, -1553419486, -1553419471, -1553404576, -1553402184, -1553402019, -1553400709, -1553400649, -1553400495, -1553400462, -1553400454, -1553400450, -1553400447, -1553400408, -1553353992, -1553353924, -1553353884, -1553353861, -1553353855, -1553351929, -1553351870, -1553351794, -1553351757, -1553351702, -1553351622, -1553351486, -1553338153, -1553337673, -1553335601, -1553335546, -1553334153, -1553334147, -1553334133, -1553334127, -1553334085, -1553314433, -1271375783, -1271375341, -1271375298, -1271375088, -1271374542, -1271374435, -1271373818, -1271373728, -1271373596, -1271373502, -1271357088, -1271357044, -1271357014, -1271356980, -1271356761, -1271356370, -1271714884, -1271714638, -1271680398, -1271680274, -1271679186, -1270748578, -1854807698, -1270482584, -1271627763, -2134949234, -2134949222"
+            }
+        ]
+    }
+}
+2025-06-08 14:34:19,016 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 14:34:37,466 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 14:34:37,501 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 14:34:40,800 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 14:34:41,074 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,994
+2025-06-08 14:34:42,397 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,162,024
+2025-06-08 14:34:42,666 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,439
+2025-06-08 14:34:45,391 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      89716264
+cart     5530446
+fav      2888258
+buy      2015839
+Name: count, dtype: int64
+2025-06-08 14:34:45,525 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 14:35:03,872 - src.data_ingestion.loader - ERROR - loader - _validate_schema - Schema validation failed:
+    schema_context     column            check  check_number  failure_case  \
+0           Column  timestamp  greater_than(0)             0   -1586903608   
+209         Column  timestamp  greater_than(0)             0   -1271476638   
+216         Column  timestamp  greater_than(0)             0   -1271471219   
+215         Column  timestamp  greater_than(0)             0   -1271475899   
+214         Column  timestamp  greater_than(0)             0   -1271476228   
+..             ...        ...              ...           ...           ...   
+105         Column  timestamp  greater_than(0)             0   -1271351916   
+104         Column  timestamp  greater_than(0)             0   -1271351950   
+103         Column  timestamp  greater_than(0)             0   -1271351980   
+102         Column  timestamp  greater_than(0)             0   -1271387902   
+317         Column  timestamp  greater_than(0)             0   -2134949222   
+
+        index  
+0     5896224  
+209  76042870  
+216  76042877  
+215  76042876  
+214  76042875  
+..        ...  
+105  67462564  
+104  67462563  
+103  67462562  
+102  67462561  
+317  89313220  
+
+[318 rows x 6 columns]
+2025-06-08 14:35:03,874 - src.data_ingestion.loader - ERROR - loader - load_raw_data - Error loading data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv: {
+    "DATA": {
+        "DATAFRAME_CHECK": [
+            {
+                "schema": null,
+                "column": "timestamp",
+                "check": "greater_than(0)",
+                "error": "Column 'timestamp' failed element-wise validator number 0: greater_than(0) failure cases: -1586903608, -2034497153, -2034497135, -2034497078, -2034496919, -2034496686, -2034496606, -2034496566, -2034496546, -2034496512, -2034496438, -2034496407, -2034496405, -2034496402, -2034496353, -2034496291, -2034495972, -2034495937, -2034495763, -2034495752, -2034495721, -2034495541, -2034494609, -2034494471, -2034494443, -2034494392, -2034494343, -2034493975, -2034493566, -1270657622, -1271752600, -1271022384, -1271043751, -1271043742, -1271043705, -1271043659, -1271043656, -1271043642, -1271043593, -1271043549, -1271043536, -1271043492, -1271043478, -1271043353, -1271043344, -1271043257, -1271043232, -1271043167, -1271042232, -1271041816, -1271041789, -1270996366, -1270996349, -1270996299, -1270954504, -1270954491, -1271103936, -1631962554, -1631962302, -1631962264, -1631962208, -1271655832, -1875959883, -1270596224, -1622661729, -1622490063, -1622490015, -1622403015, -1622402898, -1622402860, -1622402490, -1270677601, -1270677565, -1270647896, -1270647886, -1270647875, -1270647847, -1270647815, -1270647813, -1270647795, -1270647598, -1270647554, -1270647449, -1270647178, -1270647157, -1270647119, -1270645476, -1270645266, -1270644851, -1270644589, -1270644275, -1270643882, -1270643864, -1270643774, -1270402219, -1271417955, -1271417924, -1271417857, -1271417828, -1271417752, -1271417726, -1271389537, -1271387902, -1271351980, -1271351950, -1271351916, -1271351889, -1271329108, -1271310641, -1511713542, -1511713346, -1511713279, -1511713199, -1511713157, -1511713034, -1511712932, -1511712712, -1511712570, -1511712563, -1511712415, -1511712404, -1511712146, -1511712000, -1511711960, -1511711541, -1511710660, -1511710631, -1511707311, -1511707289, -1511707248, -1511706942, -1511706871, -1511706855, -1511706827, -1511706790, -1511706782, -1511706696, -1511680010, -1511679981, -1511679899, -1511679848, -1511679727, -1511679703, -1511679683, -1511678615, -1511678603, -1511678576, -1511678573, -1511678566, -1511678564, -1511678540, -1511678484, -1511676403, -1511670479, -1511670461, -1511670372, -1511670352, -1511670254, -1511670246, -1511669980, -1511669860, -1511665046, -1511665021, -1511664945, -1511664927, -1511664897, -1511664812, -1511664402, -1511663566, -1511663535, -1511663452, -1511662029, -1511661770, -1511661712, -1511660914, -1511660617, -1511660488, -1511660380, -1511660355, -1511660206, -1511660055, -1511660039, -1511660001, -1511659974, -1511659940, -1511653116, -1511653094, -1511653001, -1511652955, -1511652894, -1511643427, -1511638488, -1511635035, -1511634033, -1511633965, -1511595357, -1511593774, -1523979633, -1270897486, -1270819787, -1270817190, -1271477023, -1271476975, -1271476886, -1271476779, -1271476769, -1271476754, -1271476715, -1271476654, -1271476638, -1271476623, -1271476602, -1271476438, -1271476268, -1271476228, -1271475899, -1271471219, -1271471004, -1271470905, -1271470852, -1271470735, -1271470719, -1271470688, -1271470462, -1271470423, -1271470341, -1271470300, -1271470248, -1271470225, -1271470213, -1271470174, -1271470117, -1271469976, -1271469868, -1271469673, -1271469400, -1271469268, -1271469119, -1271468644, -1271468531, -1553488688, -1553488537, -1553488522, -1553488486, -1553488139, -1553488029, -1553487967, -1553487907, -1553487858, -1553487771, -1553420388, -1553420309, -1553419949, -1553419843, -1553419805, -1553419493, -1553419486, -1553419471, -1553404576, -1553402184, -1553402019, -1553400709, -1553400649, -1553400495, -1553400462, -1553400454, -1553400450, -1553400447, -1553400408, -1553353992, -1553353924, -1553353884, -1553353861, -1553353855, -1553351929, -1553351870, -1553351794, -1553351757, -1553351702, -1553351622, -1553351486, -1553338153, -1553337673, -1553335601, -1553335546, -1553334153, -1553334147, -1553334133, -1553334127, -1553334085, -1553314433, -1271375783, -1271375341, -1271375298, -1271375088, -1271374542, -1271374435, -1271373818, -1271373728, -1271373596, -1271373502, -1271357088, -1271357044, -1271357014, -1271356980, -1271356761, -1271356370, -1271714884, -1271714638, -1271680398, -1271680274, -1271679186, -1270748578, -1854807698, -1270482584, -1271627763, -2134949234, -2134949222"
+            }
+        ]
+    }
+}
+2025-06-08 14:51:21,657 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 14:51:42,723 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 14:51:42,730 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 14:51:44,410 - src.data_ingestion.loader - WARNING - loader - _validate_data - Found 318 rows with non-positive timestamps (<= 0). Dropping these rows.
+2025-06-08 14:51:49,284 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 14:51:49,565 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,994
+2025-06-08 14:51:50,870 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,162,022
+2025-06-08 14:51:51,138 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,439
+2025-06-08 14:51:54,058 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      89715946
+cart     5530446
+fav      2888258
+buy      2015839
+Name: count, dtype: int64
+2025-06-08 14:51:54,183 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 14:52:13,587 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 14:53:39,211 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 14:54:55,766 - src.data_ingestion.loader - INFO - loader - preprocess_data - Data preprocessing completed
+2025-06-08 15:06:51,627 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 15:19:08,451 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:19:27,172 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:19:27,174 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 15:19:28,844 - src.data_ingestion.loader - WARNING - loader - _validate_data - Found 318 rows with non-positive timestamps (<= 0). Dropping these rows.
+2025-06-08 15:19:33,784 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 15:19:34,060 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,994
+2025-06-08 15:19:35,466 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,162,022
+2025-06-08 15:19:35,732 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,439
+2025-06-08 15:20:23,006 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:20:39,969 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:20:39,971 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 15:20:44,162 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 15:20:51,163 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 15:20:52,873 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 15:20:53,142 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 15:20:54,334 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 15:20:54,589 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 15:20:58,059 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 15:20:58,207 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 15:21:16,185 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 15:21:16,193 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 15:22:29,431 - src.data_ingestion.loader - INFO - loader - preprocess_data - Data preprocessing completed
+2025-06-08 15:40:31,758 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:40:49,603 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:40:49,605 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 15:40:53,890 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 15:41:01,138 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 15:41:02,852 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 15:41:03,122 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 15:41:04,410 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 15:41:04,670 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 15:41:07,495 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 15:41:07,636 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 15:41:37,750 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:41:54,638 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:41:54,640 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 15:41:58,898 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 15:42:05,784 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 15:42:07,501 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 15:42:07,770 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 15:42:09,037 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 15:42:09,293 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 15:42:11,969 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 15:42:12,097 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 15:42:29,451 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 15:45:56,995 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 15:46:14,728 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 17:40:19,554 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 17:40:37,805 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 17:40:37,807 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 17:40:42,535 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 17:40:50,155 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 17:40:51,944 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 17:40:52,221 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 17:40:53,510 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 17:40:53,776 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 17:40:57,017 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 17:40:57,172 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 17:41:15,292 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 17:41:25,386 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 17:42:40,676 - src.data_ingestion.loader - INFO - loader - preprocess_data - Data preprocessing completed
+2025-06-08 17:56:22,610 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 17:56:41,561 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 17:56:41,563 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 17:56:46,376 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 17:56:55,603 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 17:56:57,491 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 17:56:57,811 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 17:56:59,110 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 17:56:59,370 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 17:57:02,307 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 17:57:02,458 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 17:57:22,211 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 17:57:22,220 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 17:58:49,163 - src.data_ingestion.loader - INFO - loader - preprocess_data - Data preprocessing completed
+2025-06-08 18:01:05,652 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 18:01:23,075 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 18:01:23,077 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 18:01:27,233 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 18:01:34,555 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 18:01:36,315 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 18:01:36,596 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 18:01:37,833 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 18:01:38,090 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 18:01:40,836 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 18:01:40,978 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 18:02:00,359 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 18:02:56,540 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 18:04:13,874 - src.data_ingestion.loader - INFO - loader - preprocess_data - Data preprocessing completed
+2025-06-08 18:09:51,933 - src.data_ingestion.loader - INFO - loader - save_preprocessed_csv - Preprocessed data saved as CSV to data/processed/preprocessed.csv
+2025-06-08 18:12:54,769 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 18:13:17,431 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 18:13:17,433 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 18:13:23,172 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 18:13:31,567 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 18:13:33,673 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 18:13:34,000 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 18:13:35,785 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 18:13:36,066 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 18:13:39,372 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 18:13:39,539 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 18:14:03,033 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 18:14:13,712 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 18:15:45,881 - src.data_ingestion.loader - INFO - loader - preprocess_data - Data preprocessing completed
+2025-06-08 18:42:09,100 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 18:42:26,934 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 18:42:26,936 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 18:42:31,569 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 18:42:38,572 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 18:42:40,285 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 18:42:40,556 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 18:42:41,833 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 18:42:42,090 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 18:42:44,803 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 18:42:44,943 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 18:43:02,677 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 18:43:09,534 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 18:44:23,592 - src.data_ingestion.loader - INFO - loader - preprocess_data - Data preprocessing completed
+2025-06-08 18:48:47,697 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loading raw data from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 18:49:04,978 - src.data_ingestion.loader - INFO - loader - load_raw_data - Loaded 100,150,807 records from /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/raw/UserBehavior.csv
+2025-06-08 18:49:04,980 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-08 18:49:09,057 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 318 rows with non-positive timestamps (<= 0). Before: 100,150,807, After: 100,150,489, Dropped: 318 (0.00%)
+2025-06-08 18:49:15,922 - src.data_ingestion.loader - WARNING - loader - _validate_data - Dropped 1235956 rows with timestamps outside 2017-11-25 to 2017-12-03. Before: 100,150,489, After: 98,914,533, Dropped: 1,235,956 (1.23%)
+2025-06-08 18:49:17,635 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-08 18:49:17,903 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-08 18:49:19,120 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-08 18:49:19,360 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-08 18:49:22,065 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-08 18:49:22,190 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-08 18:49:39,534 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
+2025-06-08 18:49:40,815 - src.data_ingestion.loader - INFO - loader - preprocess_data - Preprocessing data...
+2025-06-08 18:50:51,721 - src.data_ingestion.loader - INFO - loader - preprocess_data - Data preprocessing completed
+2025-06-08 18:51:08,040 - src.data_ingestion.loader - INFO - loader - save_preprocessed_parquet - Preprocessed data saved as CSV to /Users/adamchiu/Library/CloudStorage/Dropbox/Programming/Macbook/Portfolio/ML Pipeline/ecomm_purchase_propensity/data/processed/preprocessed.parquet
+2025-06-09 20:14:16,196 - src.data_ingestion.loader - INFO - loader - _validate_data - Validating loaded data...
+2025-06-09 20:14:21,928 - src.data_ingestion.loader - INFO - loader - _validate_data - Data validation summary:
+2025-06-09 20:14:22,259 - src.data_ingestion.loader - INFO - loader - _validate_data -   Users: 987,984
+2025-06-09 20:14:23,663 - src.data_ingestion.loader - INFO - loader - _validate_data -   Items: 4,142,583
+2025-06-09 20:14:24,004 - src.data_ingestion.loader - INFO - loader - _validate_data -   Categories: 9,435
+2025-06-09 20:14:25,861 - src.data_ingestion.loader - INFO - loader - _validate_data -   Behavior distribution:
+behavior_type
+pv      88596903
+cart     5466118
+fav      2852536
+buy      1998976
+Name: count, dtype: int64
+2025-06-09 20:14:53,868 - src.data_ingestion.loader - INFO - loader - _validate_schema - Running schema validation with Pandera...
+2025-06-09 20:15:15,643 - src.data_ingestion.loader - INFO - loader - _validate_schema - Schema validation passed.
