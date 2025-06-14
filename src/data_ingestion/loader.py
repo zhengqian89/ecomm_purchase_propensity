@@ -110,10 +110,10 @@ class DataLoader:
         
         # Basic statistics
         logger.info(f'Data validation summary:')
-        logger.info(f'  Users: {df['user_id'].nunique():,}')
-        logger.info(f'  Items: {df['item_id'].nunique():,}')
-        logger.info(f'  Categories: {df['category_id'].nunique():,}')
-        logger.info(f'  Behavior distribution:\n{df['behavior_type'].value_counts()}')
+        logger.info(f'  Users: {df["user_id"].nunique():,}')
+        logger.info(f'  Items: {df["item_id"].nunique():,}')
+        logger.info(f'  Categories: {df["category_id"].nunique():,}')
+        logger.info(f'  Behavior distribution:\n{df["behavior_type"].value_counts()}')
     
     def _validate_schema(self, df: pd.DataFrame) -> None:
         '''
@@ -204,9 +204,9 @@ class DataLoader:
         
         # Log time ranges
         logger.info(f'Time ranges:')
-        logger.info(f'  Train: {train_df['datetime'].min()} to {train_df['datetime'].max()}')
-        logger.info(f'  Validation: {val_df['datetime'].min()} to {val_df['datetime'].max()}')
-        logger.info(f'  Test: {test_df['datetime'].min()} to {test_df['datetime'].max()}')
+        logger.info(f'  Train: {train_df["datetime"].min()} to {train_df["datetime"].max()}')
+        logger.info(f'  Validation: {val_df["datetime"].min()} to {val_df["datetime"].max()}')
+        logger.info(f'  Test: {test_df["datetime"].min()} to {test_df["datetime"].max()}')
         
         return train_df, val_df, test_df
 
