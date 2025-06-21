@@ -22,12 +22,40 @@ class FeatureEngineer:
         '''
         self.session_timeout = timedelta(minutes=session_timeout_minutes)
 
+    def _create_session_ids(
+        self,
+        df: pd.DataFrame
+    ) -> pd.DataFrame:
+        '''
+        Create session IDs based on time gaps between user actions.
+        '''
+        df = df.sort_values(['user_id', 'timestamp'])
+
+        # Calculate time difference between consecutive actions
+        time_diff = df.groupby('user_id')['timestamp'].diff()
+
+        # New session starts when time difference > session_timeout
+        new_session = (time_diff > self.session_timeout.total_seconds()).astype(int)
+
+        # Cumulative sum of new_session gives session IDs
+        df['session_id'] = (
+            df['user_id'].astype(str) + '_' +
+            new_session.groupby(df['user_id']).cumsum().astype(str)
+        )
+
+        return df
+
     def _create_item_features(
         self,
         df: pd.DataFrame
     ) -> pd.DataFrame:
         '''
-        Create item-level features.
+        Create item-level features:
+        - Total views (count)
+        - Amount of unique viewers (nunique)
+        - Behavior count: ['pv', 'fav', 'cart', 'buy']
+        - Conversion rate: view_to_cart_rate, cart_to_buy_rate, view_to_buy_rate
+        - Popularity score: Weighted combination of different interactions
         '''
         # Popularity metrics
         item_features = df.groupby('item_id').agg({
@@ -46,14 +74,14 @@ class FeatureEngineer:
             .where(behavior_counts['pv'] > 0, 0)
         )
         item_features['cart_to_buy_rate'] = (
-            behavior_counts['cart']
-            .div(behavior_counts['buy'])
-            .where(behavior_counts['buy'] > 0, 0)
+            behavior_counts['buy']
+            .div(behavior_counts['cart'])
+            .where(behavior_counts['cart'] > 0, 0)
         )
         item_features['view_to_buy_rate'] = {
-            behavior_counts['pv']
-            .div(behavior_counts['buy'])
-            .where(behavior_counts['buy'] > 0, 0)
+            behavior_counts['buy']
+            .div(behavior_counts['pv'])
+            .where(behavior_counts['pv'] > 0, 0)
         }
 
         # Popularity score (weighted combination of different interactions)
@@ -61,3 +89,61 @@ class FeatureEngineer:
         item_features['popularity_score'] = sum(behavior_counts[btype] * weight for btype, weight in weights.item())
 
         return item_features
+    
+    def _create_user_features(
+        self,
+        df: pd.DataFrame
+    ) -> pd.DataFrame:
+        '''
+        Create user-level features.
+        '''
+        # Activity level features
+        user_features = (
+            df
+            .groupby('user_id')
+            .agg({
+                'timestamp': ['count', 'min', 'max'], # Total actions, First action, Last action
+                'behavior_type': lambda x: x.value_counts().to_dict(), # Behavior counts
+                'item_id': 'nunique', # Unique items viewed
+                'category_id': 'nunique', # Unique categories viewed
+                'session_id': 'nunique' # Number of sessions
+            })
+            .reset_index()
+        )
+
+        # Flatten behavior counts
+        behavior_counts = pd.DataFrame(user_features[('behavior_type', '<lambda>')].to_list())
+        behavior_counts = behavior_counts.fillna(0)
+
+        # Calculate derived metrics
+        user_features['total_actions'] = user_features[('timestamp', 'count')]
+        user_features['account_age_days'] = (
+            user_features[('timestamp', 'max')] - user_features[('timestamp', 'min')]
+        ).dt.total_seconds() / (24 * 3600)
+
+        # Conversion rates
+        user_features['cart_to_buy_ratio'] = (
+            behavior_counts['buy']
+            .div(behavior_counts['cart'])
+            .where(behavior_counts['cart'] > 0, 0)
+        )
+        user_features['fav_to_buy_ratio'] = (
+            behavior_counts['buy']
+            .div(behavior_counts['fav'])
+            .where(behavior_counts['fav'] > 0, 0)
+        )
+        user_features['view_to_buy_ratio'] = {
+            behavior_counts['buy']
+            .div(behavior_counts['pv'])
+            .where(behavior_counts['pv'] > 0, 0)
+        }
+
+        # Activity intensity
+        user_features['actions_per_day'] = (
+            user_features['total_actions']
+            .div(user_features['account_age_days'])
+            .where(user_features['account_age_days'] > 0, 0)
+        )
+        user_features['unique_items_per_session'] = user_features[('item_id', 'nunique')] / user_features[('session_id', 'nunique')]
+
+        return user_features
