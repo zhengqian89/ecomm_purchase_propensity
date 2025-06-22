@@ -377,3 +377,5 @@ class FeatureEngineer:
         logger.info('Target variable created successfully')
 
         return df
+    
+feature_engineer = FeatureEngineer()
