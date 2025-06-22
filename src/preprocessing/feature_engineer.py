@@ -232,3 +232,39 @@ class FeatureEngineer:
         )
 
         return df
+
+    def _create_target_variable(
+        self,
+        df: pd.DataFrame,
+        prediction_window: timedelta = timedelta(hours=24)
+    ) -> pd.DataFrame:
+        '''
+        Create target variable: Will user purchase within prediction_window?
+
+        Parameters:
+        - df: DataFrame with user behavior data
+        - prediction_window: Time window to predict purchase within
+
+        Returns:
+            DataFrame with target variable
+        '''
+        df = df.sort_values(['user_id', 'timestamp'])
+
+        # Within-user 'will a next action occur within the window'
+        future_purchase_mask = (
+            df
+            .groupby('user_id')['timestamp']
+            .apply(lambda timestamp: timestamp.shift(-1) - timestamp <= prediction_window)
+            .reset_index(level=0, drop=True)
+        )
+
+        # Within-user 'is the next action a buy?'
+        next_is_buy = (
+            df
+            .groupby('user_id')['behavior_type']
+            .shift(-1) == 'buy'
+        )
+
+        df['will_purchase'] = (next_is_buy & future_purchase_mask).astype(int)
+
+        return df
