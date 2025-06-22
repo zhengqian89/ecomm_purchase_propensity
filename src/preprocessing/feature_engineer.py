@@ -95,7 +95,14 @@ class FeatureEngineer:
         df: pd.DataFrame
     ) -> pd.DataFrame:
         '''
-        Create user-level features.
+        Create user-level features:
+        - Total actions
+        - First action
+        - Last action
+        - Behavior counts
+        - Unique items viewed
+        - Unique categories viewed
+        - Number of sessions
         '''
         # Activity level features
         user_features = (
@@ -147,3 +154,81 @@ class FeatureEngineer:
         user_features['unique_items_per_session'] = user_features[('item_id', 'nunique')] / user_features[('session_id', 'nunique')]
 
         return user_features
+
+    def _create_session_features(
+        self,
+        df: pd.DataFrame
+    ) -> pd.DataFrame:
+        '''
+        Create session-level features:
+        - Action counts per session per user
+        - Session duration
+        - Amount of unique categories per session
+        - Behavior counts per session per user
+        '''
+
+        session_features = (
+            df
+            .groupby(['unique_id', 'session_id'])
+            .agg({
+                'timestamp': ['count', lambda x: (x.max() - x.min()).total_seconds()], # Action counts & Session duration
+                'item_id': 'nunique', # Unique items in session
+                'category_id': 'nunique', # Unique categories in session
+                'behavior_type': lambda x: x.value_counts().to_dict()  # Behavior counts in session
+            })
+            .reset_index()
+        )
+
+        # Session duration and intensity metrics
+        session_features['session_duration_minutes'] = session_features[('timestamp', '<lambda>')] / 60
+        session_features['actions_per_minute'] = (
+            session_features[('timestamp', 'count')]
+            .div(session_features['session_duration_minutes'])
+            .where(session_features['session_duration_minutes'] > 0, 0)
+        )
+
+        return session_features
+    
+    def _create_time_features(
+        self,
+        df: pd.DataFrame
+    ) -> pd.DataFrame:
+        '''
+        Create time-based features:
+        - Hour (present by default as 'hour')
+        - Day of the week (present by default as 'day_of_week')
+        - Weekend (dummy variable)
+        '''
+        # Ensure that 'timestamp' column is of datetime type
+        if df['timestamp'].dtype != 'datetime64[ns]':
+            df['timestamp'] = pd.to_datetime(df['timestamp'], unit='s')
+
+        # Check if any of the features is present in the original DataFrame
+        if 'hour' not in df.columns:
+            df['hour'] = df['timestamp'].dt.hour
+        
+        if 'day_of_week' not in df.columns:
+            df['day_of_week'] = df['timestamp'].dt.dayofweek
+
+        if 'is_weekend' not in df.columns:
+            df['is_weekend'] = df['day_of_week'].isin([5, 6]).astype(int)
+        
+        # Time since last action (any type)
+        df['time_since_last_action'] = (
+            df.groupby('user_id')['timestamp']
+            .diff()
+            .dt.total_seconds()
+            .fillna(0)
+        )
+
+        # Time since last purchase (if any)
+        last_purchase = (
+            df[df['behavior_type'] == 'buy']
+            .groupby('user_id')['timestamp']
+            .transform('max')
+        )
+        df['time_since_last_purchase'] = (
+            (df['timestamp'] - last_purchase).dt.total_seconds()
+        )
+
+        return df
