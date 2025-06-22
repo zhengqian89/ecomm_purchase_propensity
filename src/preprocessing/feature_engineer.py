@@ -377,5 +377,87 @@ class FeatureEngineer:
         logger.info('Target variable created successfully')
 
         return df
-    
-feature_engineer = FeatureEngineer()
+
+    def save_features(self, df: pd.DataFrame, path: str):
+        '''
+        Save features to a parquet file.
+        '''
+        df.to_parquet(path, index=False)
+        logger.info(f'Saved features to {path}')
+
+    def load_features(self, path: str) -> pd.DataFrame:
+        '''
+        Load features from a parquet file.
+        '''
+        logger.info(f'Loading features from {path}')
+
+        return pd.read_parquet(path)
+
+    def generate_and_save_session_ids(self, df: pd.DataFrame, path: str) -> pd.DataFrame:
+        df = self._create_session_ids(df)
+        self.save_features(df, path)
+
+        return df
+
+    def generate_and_save_user_features(self, df: pd.DataFrame, path: str) -> pd.DataFrame:
+        user_features = self._create_user_features(df)
+        self.save_features(user_features, path)
+
+        return user_features
+
+    def generate_and_save_item_features(self, df: pd.DataFrame, path: str) -> pd.DataFrame:
+        item_features = self._create_item_features(df)
+        self.save_features(item_features, path)
+
+        return item_features
+
+    def generate_and_save_category_features(self, df: pd.DataFrame, path: str) -> pd.DataFrame:
+        category_features = self._create_category_features(df)
+        self.save_features(category_features, path)
+
+        return category_features
+
+    def generate_and_save_session_features(self, df: pd.DataFrame, path: str) -> pd.DataFrame:
+        session_features = self._create_session_features(df)
+        self.save_features(session_features, path)
+
+        return session_features
+
+    def generate_and_save_time_features(self, df: pd.DataFrame, path: str) -> pd.DataFrame:
+        time_features = self._create_time_features(df)
+        self.save_features(time_features, path)
+
+        return time_features
+
+    def merge_all_features(
+        self,
+        base_df_path: str,
+        user_features_path: str,
+        item_features_path: str,
+        category_features_path: str,
+        session_features_path: str,
+        time_features_path: str,
+        output_path: str
+    ) -> pd.DataFrame:
+        '''
+        Merge all feature blocks into a single DataFrame and save.
+        '''
+        df = self.load_features(base_df_path)
+        user_features = self.load_features(user_features_path)
+        item_features = self.load_features(item_features_path)
+        category_features = self.load_features(category_features_path)
+        session_features = self.load_features(session_features_path)
+        time_features = self.load_features(time_features_path)
+
+        features = (
+            df
+            .merge(user_features, on='user_id', how='left')
+            .merge(item_features, on='item_id', how='left')
+            .merge(category_features, on='category_id', how='left')
+            .merge(session_features, on=['user_id', 'session_id'], how='left')
+        )
+        features = pd.concat([features, time_features], axis=1)
+        self.save_features(features, output_path)
+        logger.info(f'All features merged and saved to {output_path}')
+        
+        return features
