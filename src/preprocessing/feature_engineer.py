@@ -31,7 +31,7 @@ class FeatureEngineer:
 
         Parameters:
             df: DataFrame with preprocessed user behavior data, containing:
-            ['user_id', 'item_id', 'category_id', 'behavior_type', 'timestamp', 'datetime', 'hour', 'day_of_week', 'date']
+            ['user_id', 'item_id', 'category_id', 'behavior_type', 'datetime', 'datetime', 'hour', 'day_of_week', 'date']
         
         Returns:
             DataFrame with engineered features.
@@ -81,10 +81,10 @@ class FeatureEngineer:
         '''
         logger.info('Creating session id...')
 
-        df = df.sort_values(['user_id', 'timestamp'])
+        df = df.sort_values(['user_id', 'datetime'])
 
         # Calculate time difference between consecutive actions
-        time_diff = df.groupby('user_id')['timestamp'].diff()
+        time_diff = df.groupby('user_id')['datetime'].diff()
 
         # New session starts when time difference > session_timeout
         new_session = (time_diff > self.session_timeout.total_seconds()).astype(int)
@@ -201,7 +201,7 @@ class FeatureEngineer:
             df
             .groupby('user_id')
             .agg({
-                'timestamp': ['count', 'min', 'max'], # Total actions, First action, Last action
+                'datetime': ['count', 'min', 'max'], # Total actions, First action, Last action
                 'behavior_type': lambda x: x.value_counts().to_dict(), # Behavior counts
                 'item_id': 'nunique', # Unique items viewed
                 'category_id': 'nunique', # Unique categories viewed
@@ -215,9 +215,9 @@ class FeatureEngineer:
         behavior_counts = behavior_counts.fillna(0)
 
         # Calculate derived metrics
-        user_features['total_actions'] = user_features[('timestamp', 'count')]
+        user_features['total_actions'] = user_features[('datetime', 'count')]
         user_features['account_age_days'] = (
-            user_features[('timestamp', 'max')] - user_features[('timestamp', 'min')]
+            user_features[('datetime', 'max')] - user_features[('datetime', 'min')]
         ).dt.total_seconds() / (24 * 3600)
 
         # Conversion rates
@@ -231,11 +231,11 @@ class FeatureEngineer:
             .div(behavior_counts['fav'])
             .where(behavior_counts['fav'] > 0, 0)
         )
-        user_features['view_to_buy_ratio'] = {
+        user_features['view_to_buy_ratio'] = (
             behavior_counts['buy']
             .div(behavior_counts['pv'])
             .where(behavior_counts['pv'] > 0, 0)
-        }
+        )
 
         # Activity intensity
         user_features['actions_per_day'] = (
@@ -266,7 +266,7 @@ class FeatureEngineer:
             df
             .groupby(['unique_id', 'session_id'])
             .agg({
-                'timestamp': ['count', lambda x: (x.max() - x.min()).total_seconds()], # Action counts & Session duration
+                'datetime': ['count', lambda x: (x.max() - x.min()).total_seconds()], # Action counts & Session duration
                 'item_id': 'nunique', # Unique items in session
                 'category_id': 'nunique', # Unique categories in session
                 'behavior_type': lambda x: x.value_counts().to_dict()  # Behavior counts in session
@@ -275,9 +275,9 @@ class FeatureEngineer:
         )
 
         # Session duration and intensity metrics
-        session_features['session_duration_minutes'] = session_features[('timestamp', '<lambda>')] / 60
+        session_features['session_duration_minutes'] = session_features[('datetime', '<lambda>')] / 60
         session_features['actions_per_minute'] = (
-            session_features[('timestamp', 'count')]
+            session_features[('datetime', 'count')]
             .div(session_features['session_duration_minutes'])
             .where(session_features['session_duration_minutes'] > 0, 0)
         )
@@ -299,17 +299,17 @@ class FeatureEngineer:
         logger.info('Creating time features...')
 
         time_features = pd.DataFrame()
-        # Ensure that 'timestamp' column is of datetime type
-        if df['timestamp'].dtype != 'datetime64[ns]':
-            df['timestamp'] = pd.to_datetime(df['timestamp'], unit='s')
+        # Ensure that 'datetime' column is of datetime type
+        if df['datetime'].dtype != 'datetime64[ns]':
+            df['datetime'] = pd.to_datetime(df['datetime'], unit='s')
 
         # Check if any of the features is present in the original DataFrame
         if 'hour' not in df.columns:
-            df['hour'] = df['timestamp'].dt.hour
+            df['hour'] = df['datetime'].dt.hour
         time_features['hour'] = df['hour']
         
         if 'day_of_week' not in df.columns:
-            df['day_of_week'] = df['timestamp'].dt.dayofweek
+            df['day_of_week'] = df['datetime'].dt.dayofweek
         time_features['day_of_week'] = df['day_of_week']
 
         if 'is_weekend' not in df.columns:
@@ -318,7 +318,7 @@ class FeatureEngineer:
         
         # Time since last action (any type)
         time_features['time_since_last_action'] = (
-            df.groupby('user_id')['timestamp']
+            df.groupby('user_id')['datetime']
             .diff()
             .dt.total_seconds()
             .fillna(0)
@@ -327,11 +327,11 @@ class FeatureEngineer:
         # Time since last purchase (if any)
         last_purchase = (
             df[df['behavior_type'] == 'buy']
-            .groupby('user_id')['timestamp']
+            .groupby('user_id')['datetime']
             .transform('max')
         )
         time_features['time_since_last_purchase'] = (
-            (df['timestamp'] - last_purchase).dt.total_seconds()
+            (df['datetime'] - last_purchase).dt.total_seconds()
         )
 
         logger.info('Time features created successfully')
@@ -355,13 +355,13 @@ class FeatureEngineer:
         '''
         logger.info('Creating target variable...')
 
-        df = df.sort_values(['user_id', 'timestamp'])
+        df = df.sort_values(['user_id', 'datetime'])
 
         # Within-user 'will a next action occur within the window'
         future_purchase_mask = (
             df
-            .groupby('user_id')['timestamp']
-            .apply(lambda timestamp: timestamp.shift(-1) - timestamp <= prediction_window)
+            .groupby('user_id')['datetime']
+            .apply(lambda datetime: datetime.shift(-1) - datetime <= prediction_window)
             .reset_index(level=0, drop=True)
         )
 
@@ -459,5 +459,5 @@ class FeatureEngineer:
         features = pd.concat([features, time_features], axis=1)
         self.save_features(features, output_path)
         logger.info(f'All features merged and saved to {output_path}')
-        
+
         return features
