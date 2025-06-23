@@ -2,3 +2,4 @@ venv/
 data/processed/preprocessed.parquet
 data/features/*.parquet
 .DS_Store
+mykeys/
