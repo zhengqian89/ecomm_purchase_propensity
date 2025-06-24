@@ -206,3 +206,6 @@ class TargetEngineer:
             if not df[col].isna().all():
                 pos_rate = df[col].mean() * 100
                 logger.info(f'Target {col} positive rate: {pos_rate:.2f}%')
+
+# Instantiated object
+target_engineer = TargetEngineer()
