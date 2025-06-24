@@ -532,56 +532,6 @@ class FeatureEngineer:
             logger.error(traceback.format_exc())
             raise
 
-    def create_target_variable(
-        self,
-        df: pd.DataFrame,
-        prediction_window: timedelta = timedelta(hours=24)
-    ) -> pd.DataFrame:
-        '''
-        Create target variable: Will user purchase within prediction_window?
-
-        Parameters:
-        - df: DataFrame with user behavior data
-        - prediction_window: Time window to predict purchase within
-
-        Returns:
-            DataFrame with target variable
-        '''
-        try:
-            logger.info(f'Creating target variable with prediction window: {prediction_window}')
-
-            # Validate required columns
-            if 'user_id' not in df.columns or 'datetime' not in df.columns or 'behavior_type' not in df.columns:
-                raise ValueError("Required columns for target variable not found")
-
-            df = df.sort_values(['user_id', 'datetime'])
-
-            # Within-user 'will a next action occur within the window'
-            future_purchase_mask = (
-                df
-                .groupby('user_id')['datetime']
-                .apply(lambda datetime_series: datetime_series.shift(-1) - datetime_series <= prediction_window)
-                .reset_index(level=0, drop=True)
-            )
-
-            # Within-user 'is the next action a buy?'
-            next_is_buy = (
-                df
-                .groupby('user_id')['behavior_type']
-                .shift(-1) == 'buy'
-            )
-
-            df['will_purchase'] = (next_is_buy & future_purchase_mask).astype(int)
-
-            target_distribution = df['will_purchase'].value_counts()
-            logger.info(f'Target variable created successfully. Distribution: {target_distribution.to_dict()}')
-            return df
-
-        except Exception as e:
-            logger.error(f'Error creating target variable: {str(e)}')
-            logger.error(traceback.format_exc())
-            raise
-
     def save_features(self, df: pd.DataFrame, path: str):
         '''
         Save features to a parquet file.
