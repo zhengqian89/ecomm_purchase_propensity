@@ -446,6 +446,17 @@ class FeatureEngineer:
                 0
             )
 
+            # Flatten behavior counts for sessions
+            behavior_counts = pd.DataFrame(session_features['behavior_counts'].to_list())
+            behavior_counts = behavior_counts.fillna(0)
+
+            # Add behavior counts as separate columns
+            for behavior in ['pv', 'fav', 'cart', 'buy']:
+                session_features[f'session_{behavior}_count'] = behavior_counts.get(behavior, 0)
+
+            # Drop the behavior_counts column
+            session_features = session_features.drop('behavior_counts', axis=1)
+
             logger.info(f'Session features created successfully. Shape: {session_features.shape}')
             return session_features
 
