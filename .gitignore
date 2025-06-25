@@ -3,3 +3,4 @@ data/processed/preprocessed.parquet
 data/features/*.parquet
 .DS_Store
 mykeys/
+notebooks/logs/taobao_engine.log
